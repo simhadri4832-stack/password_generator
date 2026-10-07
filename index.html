@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="container">
+        <section class="hero">
+            <div class="logo">🔐</div>
+            <div>
+                <p class="tag">SECURITY TOOL</p>
+                <h1>Password Generator</h1>
+                <p class="subtitle">
+                    Create strong and secure passwords instantly using JavaScript.
+                </p>
+            </div>
+        </section>
+
+        <section class="generator-card">
+
+            <div class="password-box">
+                <input type="text" id="password" readonly
+                       placeholder="Your password will appear here">
+                <button id="copyBtn" class="copy-btn" title="Copy password">📋</button>
+            </div>
+
+            <div class="strength-area">
+                <div class="strength-header">
+                    <span>Password Strength</span>
+                    <strong id="strengthText">-</strong>
+                </div>
+                <div class="strength-bar">
+                    <div id="strengthFill"></div>
+                </div>
+            </div>
+
+            <div class="settings">
+                <div class="setting-title">
+                    <h2>Password Settings</h2>
+                    <span id="lengthValue">16</span>
+                </div>
+
+                <label class="range-label">
+                    <span>Password Length</span>
+                    <input type="range" id="length" min="6" max="40" value="16">
+                </label>
+
+                <div class="options">
+                    <label class="option">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="checkmark"></span>
+                        <span>
+                            <b>Uppercase</b>
+                            <small>A-Z</small>
+                        </span>
+                    </label>
+
+                    <label class="option">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="checkmark"></span>
+                        <span>
+                            <b>Lowercase</b>
+                            <small>a-z</small>
+                        </span>
+                    </label>
+
+                    <label class="option">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="checkmark"></span>
+                        <span>
+                            <b>Numbers</b>
+                            <small>0-9</small>
+                        </span>
+                    </label>
+
+                    <label class="option">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="checkmark"></span>
+                        <span>
+                            <b>Symbols</b>
+                            <small>! @ # $ %</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">
+                <span>⚡</span> Generate Password
+            </button>
+
+            <p id="message" class="message"></p>
+        </section>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <div class="info-icon">🛡️</div>
+                <h3>Strong Passwords</h3>
+                <p>Use longer passwords with a mix of letters, numbers and symbols.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">⚡</div>
+                <h3>Instant Generation</h3>
+                <p>Generate a new password instantly without sending data to a server.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">🔒</div>
+                <h3>Privacy Friendly</h3>
+                <p>This demo generates passwords directly inside your browser.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Password Generator Project • HTML5 • CSS3 • JavaScript</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
